@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Smart Task Manager</h1>
+    <p class="owner">
+        Developed by: <strong>Richard Von P. Sopongco</strong> |
+        Student No: <strong>2023102637</strong>
+    </p>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+</header>
+
+<section class="description">
+    <p>
+        A modern web-based task management system that allows users to add, edit, 
+        delete, prioritize, categorize, and track tasks efficiently. 
+        Features include real-time statistics, persistent local storage, 
+        task sorting, search filtering, and dynamic theme switching.
+    </p>
+</section>
+
+<section class="task-form">
+    <input type="text" id="taskTitle" placeholder="Task Title (Press Enter to Add)">
+    <input type="date" id="taskDate">
+    
+    <select id="taskPriority">
+        <option value="Low">Low Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+    </select>
+
+    <input type="text" id="taskCategory" placeholder="Category">
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="clearAllTasks()" class="danger">Clear All</button>
+</section>
+
+<section class="controls">
+    <input type="text" id="searchInput" placeholder="Search tasks..." onkeyup="renderTasks()">
+    
+    <select id="filterStatus" onchange="renderTasks()">
+        <option value="All">All Tasks</option>
+        <option value="Completed">Completed</option>
+        <option value="Pending">Pending</option>
+    </select>
+
+    <select id="sortOption" onchange="renderTasks()">
+        <option value="None">Sort By</option>
+        <option value="Date">Due Date</option>
+        <option value="Priority">Priority</option>
+    </select>
+</section>
+
+<section class="stats">
+    <p>Total: <span id="totalTasks">0</span></p>
+    <p>Completed: <span id="completedTasks">0</span></p>
+    <p>Pending: <span id="pendingTasks">0</span></p>
+</section>
+
+<ul id="taskList"></ul>
+
+<footer>
+    <p>Mini Software Feature Sprint - Task Manager</p>
+    <p>© 2026 Mapúa University | CPE106L – Software Design Laboratory</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
