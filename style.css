@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+    transition: 0.4s ease;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.owner {
+    font-size: 14px;
+}
+
+.description {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.task-form, .controls {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.task-form input, 
+.task-form select,
+.controls input,
+.controls select {
+    padding: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #3498db;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.danger {
+    background: #e74c3c;
+}
+
+#taskList {
+    list-style: none;
+    padding: 20px;
+}
+
+.task-item {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 6px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-3px);
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-actions button {
+    margin-left: 5px;
+}
+
+/* Priority Colors */
+.Low { border-color: green; }
+.Medium { border-color: orange; }
+.High { border-color: red; }
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+/* DARK MODE */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark header {
+    background: #000;
+}
+
+.dark .task-item {
+    background: #1e1e1e;
+}
+
+.dark .description {
+    color: #ccc;
+}
+
+.dark footer {
+    background: #000;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+}
